@@ -19,5 +19,15 @@ public class Main {
         for(char c : "An African Swallow.".toCharArray()) {
             System.out.print(c + " ");
         }
+
+        for(int i = 0; i < 10; i++) {
+            new Rock();
+        }
+    }
+}
+
+class Rock {
+    Rock() {
+        System.out.print("Rock ");
     }
 }
