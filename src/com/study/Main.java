@@ -30,7 +30,10 @@ public class Main {
             t.info("overloaded method");
         }
 
-        new Tree();
+        Tree t = new Tree();
+        int a = t.foo();
+
+        Bird b = new Bird();
     }
 }
 
@@ -61,4 +64,15 @@ class Tree {
     void info(String s) {
         System.out.println(s + ": Tree is " + height + " feet tall");
     }
+
+    void f() {
+        System.out.println("hello world");
+    }
+
+    int foo() {
+        System.out.println(1);
+        return 1;
+    }
 }
+
+class Bird {}
