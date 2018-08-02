@@ -7,7 +7,7 @@ public class Cookie {
         print("Cookie constructor");
     }
 
-    void bite() {
+    protected void bite() {
         print("bite");
     }
 }
