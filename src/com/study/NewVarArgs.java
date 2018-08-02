@@ -12,7 +12,6 @@ public class NewVarArgs {
         printArray(new Integer(47), new Float(3.14), new Double(11.11));
         printArray(47, 3.14F, 11.11);
         printArray();
-        printArray((Object[])new Integer[]{1, 2, 3, 4});
+        printArray(new Integer[]{1, 2, 3, 4});
     }
 }
-g
