@@ -1,5 +1,7 @@
 package com.study;
 
+import com.study.Table;
+
 public class VarargType {
     static void f(Character... args) {
         System.out.println(args.getClass());
@@ -18,5 +20,7 @@ public class VarargType {
         f('a', 'b', 'c');
         g();
         System.out.println("int[]: " + new int[0].getClass());
+        Table t = new Table();
+        t.f2(1);
     }
 }
