@@ -1,6 +1,7 @@
 package com.study.reusing;
 
 import static com.study.print.Print.*;
+import static com.study.reusing.Orc.*;
 
 public class Hide {
     public static void main(String[] args) {
