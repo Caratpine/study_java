@@ -5,6 +5,9 @@ import com.study.music.Note;
 import static com.study.print.Print.print;
 
 public class Music4 {
+    public static void main(String[] args) {
+
+    }
 }
 
 abstract class InstrumentA {
@@ -33,7 +36,7 @@ class WindA extends InstrumentA {
 
 class PercussionA extends InstrumentA {
     public void play(Note n) {
-        prinf("Percussion.play() " + n);
+        print("Percussion.play() " + n);
     }
 
     public String what() {
