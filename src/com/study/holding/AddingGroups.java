@@ -12,7 +12,17 @@ public class AddingGroups {
 
         collection.addAll(Arrays.asList(moreInts));
 
-        for(Integer v : collection)
+//        for(Integer v : collection)
+//            print(v);
+
+        Collections.addAll(collection, 11, 12, 13);
+        Collections.addAll(collection, moreInts);
+
+        List<Integer> list = Arrays.asList(16, 17, 18);
+        list.set(1, 99);
+        list.add(21);
+
+        for(Integer v : list)
             print(v);
     }
 }
