@@ -14,6 +14,10 @@ public class ApplesAndOrangesWithoutGenerics {
 
         for(int i = 0; i < apples.size(); i++)
             ((Apple)apples.get(i)).id();
+
+        ArrayList<Orange> oranges = new ArrayList<Orange>();
+        for(int i = 0; i < 3; i++)
+            oranges.add(new Orange());
     }
 }
 
