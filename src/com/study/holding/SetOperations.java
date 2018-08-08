@@ -1,5 +1,7 @@
 package com.study.holding;
 
+import org.w3c.dom.Text;
+
 import java.util.*;
 
 import static com.study.print.Print.print;
@@ -24,6 +26,5 @@ public class SetOperations {
 
         Collections.addAll(set1, "X Y Z".split(" "));
         print("'X Y Z' added to set1: " + set1);
-
     }
 }
