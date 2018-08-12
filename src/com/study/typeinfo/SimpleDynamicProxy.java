@@ -1,9 +1,14 @@
 package com.study.typeinfo;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.lang.reflect.*;
 
 import static com.study.print.Print.print;
 
+@FuckAnnotation
 public class SimpleDynamicProxy {
     public static void consumer(Interface iface) {
         iface.doSomething();
@@ -11,15 +16,13 @@ public class SimpleDynamicProxy {
     }
 
     public static void main(String[] args) {
-        RealObject real = new RealObject();
-        consumer(real);
+        boolean hasAnnotation = SimpleDynamicProxy.class.isAnnotationPresent(FuckAnnotation.class);
+        if ( hasAnnotation ) {
+            FuckAnnotation fuckAnnotation = SimpleDynamicProxy.class.getAnnotation(FuckAnnotation.class);
 
-        Interface proxy = (Interface)Proxy.newProxyInstance(
-                Interface.class.getClassLoader(),
-                new Class[]{ Interface.class},
-                new DynamicProxyHandler(real)
-        );
-        consumer(proxy);
+            print(fuckAnnotation.id());
+            print(fuckAnnotation.msg());
+        }
     }
 }
 
@@ -42,4 +45,11 @@ class DynamicProxyHandler implements InvocationHandler {
         }
         return method.invoke(proxied, args);
     }
+}
+
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@interface FuckAnnotation {
+    public int id() default -1;
+    public String msg() default "Hi";
 }
