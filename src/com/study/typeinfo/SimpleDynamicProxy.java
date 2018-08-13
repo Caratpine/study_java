@@ -21,7 +21,7 @@ public class SimpleDynamicProxy {
             FuckAnnotation fuckAnnotation = SimpleDynamicProxy.class.getAnnotation(FuckAnnotation.class);
 
             print(fuckAnnotation.id());
-            print(fuckAnnotation.msg());
+
         }
     }
 }
