@@ -2,6 +2,8 @@ package generics;
 
 public class Java8Tester {
 
+    private final static String salutation = "fff";
+
     interface MathOperation {
         int operation(int a, int b);
     }
@@ -38,8 +40,11 @@ public class Java8Tester {
             System.out.println("Hello " + message);
         };
 
+        GreetingService greetingService2 = message ->
+                System.out.println(salutation + message);
+
         greetingService.saidMessage("world");
         greetingService1.saidMessage("google");
-
+        greetingService2.saidMessage("facebook");
     }
 }
