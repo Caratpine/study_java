@@ -7,5 +7,5 @@ import java.util.List;
 
 @NoRepositoryBean
 public interface BaseRepository<T, Long> extends PagingAndSortingRepository<T, Long> {
-    List<T> findTop3ByOrderUpdateTimeDescIdAsc();
+    List<T> findTop3ByOrderByUpdateTimeDescIdAsc();
 }
